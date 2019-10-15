@@ -1,0 +1,49 @@
+.productive{
+
+    &_grid{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        gap:50px;
+        max-width: 600px;
+        margin: 0 auto;
+        
+        @include breakpoint(large){
+            grid-template-columns: repeat(2,1fr);
+            max-width: 1320px;
+        }
+
+    }
+    &_img{
+        text-align: center;
+        img{
+            width: 100%;
+            max-width: 615px;
+        }
+    }
+    &_text{
+        
+    
+
+        h2{
+            @include breakpoint(large){
+                max-width: 400px;
+            }
+
+        }
+        a{
+            background-image: url("/css/images/icon-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 25px;
+            color: $Cyan-Blue;
+            border-bottom: 1px solid $Cyan-Blue;
+            transition: all 200ms, ease-in-out;
+
+            &:hover{
+                color: #ffffff;
+                border-bottom: 1px solid #ffffff;
+            }
+        }
+    }
+}
